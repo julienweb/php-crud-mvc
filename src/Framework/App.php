@@ -1,26 +1,21 @@
 <?php
 namespace Framework;
 
-class App {
+use Framework\Http\Request;
+use Framework\Http\Response;
 
-    public function run()
+abstract class App {
+
+    protected $request;
+    protected $response;
+    protected $name;
+
+    protected function __construct()
     {
-        $uri = $_SERVER['REQUEST_URI'];
-
-        //Redirect uri
-        if ($uri !== $uri[0] && $uri[-1] === '/') {
-            header('HTTP/1.1 301 Moved Permanently');
-            header('Location: ' . substr($uri, 0, -1));
-            exit();
-        }
-        if ($uri === '/') {
-            echo 'Bienvenue sur la page d\'accueil';
-        }
-        elseif ($uri === '/blog') {
-            echo "Bienvenue sur le blog";
-        }
-        else {
-            echo "Erreur 404";
-        }
+        $this->request = new Request();
+        $this->response = new Response();
+        $this->name = '';
     }
+
+    abstract public function run();
 }

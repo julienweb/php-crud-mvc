@@ -4,7 +4,8 @@ namespace Framework;
 use Framework\Http\Request;
 use Framework\Http\Response;
 
-abstract class App {
+abstract class App
+{
 
     protected $request;
     protected $response;

@@ -15,6 +15,6 @@ if (empty($_GET['app']) || file_exists($_GET['app'])) {
     $_GET['app'] = DEFAULT_APP;
 }
 
-$appClass = 'App'.DS.$_GET['app'].DS.$_GET['app'].'App';
+$appClass = DS.'App'.DS.$_GET['app'].DS.$_GET['app'].'App';
 $app = new $appClass();
 $app->run();

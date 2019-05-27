@@ -1,5 +1,6 @@
 <?php
 namespace App\Frontend;
+use App\Frontend\Home\HomeController;
 use Framework\App;
 
 class FrontendApp extends App {
@@ -15,11 +16,12 @@ class FrontendApp extends App {
         $this->response->redirectTrailingSlash($this->request->getUri());
 
         if ($this->request->getUri() === '/') {
-            echo 'Bienvenue sur la page d\'accueil';
+            $home = new HomeController();
+            $home->index();
         }
 
-        elseif ($this->request->getUri() === '/blog') {
-            echo "Bienvenue sur le blog";
+        elseif ($this->request->getUri() === '/chapitres') {
+            echo 'Bienvenue sur le blog';
         }
 
         else {

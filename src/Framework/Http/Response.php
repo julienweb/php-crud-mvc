@@ -3,6 +3,8 @@ namespace Framework\Http;
 
 class Response {
 
+    protected $page;
+
     public function addHeader($header)
     {
         header($header);
@@ -27,5 +29,10 @@ class Response {
     {
         $this->addHeader('HTTP/1.1 404 Not Found');
         exit('Erreur 404');
+    }
+
+    public function setPage ($page)
+    {
+        $this->page = $page;
     }
 }

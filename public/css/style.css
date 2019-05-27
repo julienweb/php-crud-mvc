@@ -1,0 +1,71 @@
+h1, h2, p, strong {
+    font-family: 'Montserrat', sans-serif !important;
+    /*font-family: 'Raleway', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Questrial', sans-serif;*/
+}
+
+h1 {
+}
+/** Regles génériques */
+
+.text-align-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-6 {
+    margin-top: 10rem;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+/*********************
+        Navbar
+ *********************/
+
+.navbar {
+    background-color: initial;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    transition-duration: 0.7s;
+}
+.navbar.full {
+    height: 100px;
+    line-height: 100px;
+}
+.navbar.shrink {
+    height: 60px;
+    line-height: 60px;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav li a {
+    transition-duration: 0.7s;
+    padding: 0 2em;
+    text-transform: uppercase;
+    color: #424242;
+}
+.nav li .active {
+    color: rgb(199,162,41);
+}

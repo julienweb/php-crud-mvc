@@ -19,4 +19,9 @@ abstract class App
     }
 
     abstract public function run();
+
+    public function getName()
+    {
+        return $this->name;
+    }
 }

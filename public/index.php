@@ -9,6 +9,8 @@ $fwLoader = new SplClassLoader('Framework', 'src');
 $fwLoader->register();
 $appLoader = new SplClassLoader('App', 'src');
 $appLoader->register();
+$dbLoader = new SplClassLoader('Database', 'src');
+$dbLoader->register();
 
 // Si l'application n'est pas valide, redirection vers l'application par défaut pour générer une erreur 404
 if (empty($_GET['app']) || file_exists($_GET['app'])) {

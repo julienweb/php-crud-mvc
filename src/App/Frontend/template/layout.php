@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>P4 Frontend</title>
+    <title>Mon Blog</title>
 </head>
 
 <body class="amber lighten-4">
@@ -76,12 +76,6 @@
 <footer class="blue-grey darken-4 text-align-center" style="padding: 2em; color: aliceblue;">
     <a href="https://github.com/julienweb/php-crud-mvc">Github</a>
 </footer>
- text-align-center
-<!--<footer>
-    Blog réalisé avec PHP, Javascript, jQuery, Materialize, HTML5 et CSS.
-    <br>
-    dans le cadre de la formation "Développeur web junior sur <a href="https://openclassrooms.com">OpenClassRooms</a>
-</footer>-->
 
 <!-- Materialize JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

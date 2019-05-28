@@ -1,13 +1,18 @@
 <?php
 namespace App\Frontend\Home;
 
-class HomeController {
+use Framework\Controller;
+
+class HomeController extends Controller {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->module = 'Home';
+    }
 
     public function index ()
     {
-        ob_start();
-        require 'src/App/Frontend/Home/view/index.php';
-        $content = ob_get_clean();
-        require 'template/layout.php';
+        return $this->view->render($this->module, 'index.php');
     }
 }

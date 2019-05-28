@@ -1,5 +1,6 @@
 <?php
 namespace App\Frontend;
+use App\Frontend\Blog\BlogController;
 use App\Frontend\Home\HomeController;
 use Framework\App;
 
@@ -21,7 +22,9 @@ class FrontendApp extends App {
         }
 
         elseif ($this->request->getUri() === '/chapitres') {
-            echo 'Bienvenue sur le blog';
+            
+            $blog = new BlogController();
+            $blog->index();
         }
 
         else {

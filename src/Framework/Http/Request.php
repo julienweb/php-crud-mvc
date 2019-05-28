@@ -3,9 +3,9 @@ namespace Framework\Http;
 
 class Request {
 
-    public function getUri()
+    public function dataPOST($key)
     {
-        return $_SERVER['REQUEST_URI'];
+        return isset($_POST[$key]) ? $_POST[$key] : null;
     }
 
     public function dataGET($key)
@@ -13,8 +13,16 @@ class Request {
         return isset($_GET[$key]) ? $_GET[$key] : null;
     }
 
-    public function dataPOST($key)
+    public function getUri()
     {
-        return isset($_POST[$key]) ? $_POST[$key] : null;
+        return $_SERVER['REQUEST_URI'];
+    }
+
+    public function getApp()
+    {
+        if (!isset($_GET['app']) ) {
+            throw new \Exception("L'application est vide");
+        }
+        return $_GET['app'];
     }
 }

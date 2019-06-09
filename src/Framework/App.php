@@ -9,12 +9,14 @@ abstract class App
 
     protected $request;
     protected $response;
+    protected $router;
     protected $name;
 
     protected function __construct()
     {
         $this->request = new Request();
         $this->response = new Response();
+        $this->router = new Router();
         $this->name = '';
     }
 

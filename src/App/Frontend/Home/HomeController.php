@@ -5,9 +5,9 @@ use Framework\Controller;
 
 class HomeController extends Controller {
 
-    public function __construct()
+    public function __construct($callable)
     {
-        parent::__construct();
+        parent::__construct($callable);
         $this->module = 'Home';
     }
 

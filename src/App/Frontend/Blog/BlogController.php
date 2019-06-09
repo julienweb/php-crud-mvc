@@ -5,9 +5,9 @@ use Framework\Controller;
 
 class BlogController extends Controller {
 
-    public function __construct()
+    public function __construct($callable)
     {
-        parent::__construct();
+        parent::__construct($callable);
         $this->model = new BlogModel();
         $this->module = 'Blog';
     }

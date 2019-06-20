@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Materialize: Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?= $fileCss; ?>">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Mon Blog</title>
@@ -31,15 +31,15 @@
                 </a>
             </li>
             <li>
-                <a href="/chapitres" class="nav-btn grey-text link">
-                    <span style="margin-right: 0.7em;"><i class="fas fa-book-open"></i></span>
-                    chapitres
-                </a>
-            </li>
-            <li>
                 <a href="/infos" class="nav-btn grey-text link">
                     <span style="margin-right: 0.7em;"><i class="fas fa-address-card"></i></span>
                     Auteur
+                </a>
+            </li>
+            <li>
+                <a href="/chapitres" class="nav-btn grey-text link">
+                    <span style="margin-right: 0.7em;"><i class="fas fa-book-open"></i></span>
+                    espace lecture
                 </a>
             </li>
             <li>
@@ -80,6 +80,6 @@
 <!-- Materialize JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<script src="js/init.js"></script>
+<script src="<?= $fileJs; ?>"></script>
 </body>
 </html>

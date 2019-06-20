@@ -1,6 +1,7 @@
 <?php
 namespace App\Frontend\Home;
 
+use Framework\App;
 use Framework\Controller;
 
 class HomeController extends Controller {

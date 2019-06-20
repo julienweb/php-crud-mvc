@@ -17,7 +17,8 @@ class FrontendApp extends App {
     {
         $this->router->addRoute(new Route('/', 'Home', 'index'));
         $this->router->addRoute(new Route('/chapitres', 'Blog', 'index'));
-        
+        $this->router->addRoute(new Route('/chapitres/chapitre-:id', 'Blog', 'show', 'id'));
+
         $this->response->redirectTrailingSlash($this->request->getUri());
         
         $controller = $this->getController();
@@ -34,6 +35,8 @@ class FrontendApp extends App {
                 $this->response->redirect404();
             }
         }
+
+        $_GET = array_merge($_GET, $routeMatched->getParams());
 
         $controller = 'App'.DS.$this->name.DS.$routeMatched->getModule().DS.$routeMatched->getModule().'Controller';
         return new $controller($routeMatched->getCallable());

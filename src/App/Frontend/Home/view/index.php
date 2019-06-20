@@ -1,3 +1,6 @@
+<?php $fileJs = "js/init.js" ?>
+<?php $fileCss = "css/style.css"; ?>
+
 <header class=" mt-10" style="margin-bottom: 20rem;">
     <div class="m-auto text-align-center">
         <p><strong>Jean Forteroche</strong> présente</p>

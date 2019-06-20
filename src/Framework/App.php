@@ -10,7 +10,7 @@ abstract class App
     protected $request;
     protected $response;
     protected $router;
-    protected $name;
+    public $name;
 
     protected function __construct()
     {

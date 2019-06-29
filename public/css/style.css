@@ -11,7 +11,28 @@ h1 {
 a{
     color:inherit;
 }
+footer {
+    padding: 2em;
+    color: aliceblue;
+    position: relative;
+    bottom:0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
 /** Regles génériques */
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
 
 .text-align-center {
     text-align: center;
@@ -53,11 +74,32 @@ a{
     padding-bottom: 3em;
 }
 
-.jumbotron {
-    width: auto;
-    padding: 3em 5em;
-    background-color: #e0e0e0;
+.d-flex {
+    display: flex;
+}
+
+.alert-success {
+    padding: 2em 5em;
+    width: 100%;
+    background-color: #9ccc65;
     border-radius: 0.3em;
+}
+
+.alert-danger {
+    padding: 1em;
+    width: 100%;
+    background-color: #f44336;
+    border-radius: 0.3em;
+}
+
+.back-btn {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.back-btn:hover {
+    color: #546e7a;
+    border-bottom: 1px solid #546e7a;
 }
 
 /*********************

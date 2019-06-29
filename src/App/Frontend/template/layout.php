@@ -73,7 +73,7 @@
 <div class="container mt-10 mb-3">
     <?= $content ?>
 </div>
-<footer class="blue-grey darken-4 text-align-center" style="padding: 2em; color: aliceblue;">
+<footer class="blue-grey darken-4 text-align-center">
     <a href="https://github.com/julienweb/php-crud-mvc">Github</a>
 </footer>
 

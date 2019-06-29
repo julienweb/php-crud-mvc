@@ -18,7 +18,9 @@ class FrontendApp extends App {
         $this->router->addRoute(new Route('/', 'Home', 'index'));
         $this->router->addRoute(new Route('/chapitres', 'Blog', 'index'));
         $this->router->addRoute(new Route('/chapitres/chapitre-:id', 'Blog', 'show', 'id'));
-
+        $this->router->addRoute(new Route('/chapitres/ajouter-commentaire', 'Blog', 'addComment'));
+        $this->router->addRoute(new Route('/chapitres/signaler-commentaire-:id', 'Blog', 'signalizeComment', 'id'));
+        
         $this->response->redirectTrailingSlash($this->request->getUri());
         
         $controller = $this->getController();

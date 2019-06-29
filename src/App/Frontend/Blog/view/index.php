@@ -1,5 +1,5 @@
-<?php $fileJs = "js/init.js" ?>
-<?php $fileCss = "css/style.css"; ?>
+<?php $fileJs = "../js/init.js" ?>
+<?php $fileCss = "../css/style.css"; ?>
 <div class="container">
     <?php foreach ($listPosts as $post): ?>
     <div class="row">
@@ -15,3 +15,4 @@
         </div>
     </div>
     <?php endforeach; ?>
+</div>

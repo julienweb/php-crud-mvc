@@ -2,6 +2,7 @@
 namespace Framework;
 
 use Framework\Http\Request;
+use Framework\Http\Response;
 
 class Controller {
     
@@ -10,11 +11,14 @@ class Controller {
     protected $module;
     protected $callable = '';
     protected $request;
+    protected $response;
+    protected $user;
     
     public function __construct($callable)
     {
         $this->view = new Page();
         $this->request = new Request();
+        $this->response = new Response();
         $this->setCallable($callable);
     }
 

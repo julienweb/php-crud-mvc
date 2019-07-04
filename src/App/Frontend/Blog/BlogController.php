@@ -51,7 +51,6 @@ class BlogController extends Controller {
 
             $post =  array_keys($_POST);
             $postId =  preg_replace('#[a-z]+#', '', $post[2]);
-            var_dump($postId);
            // $postId =  preg_replace('~\D~', '', $post);
             
             $postId = htmlspecialchars($postId);
@@ -75,7 +74,6 @@ class BlogController extends Controller {
 
         $post =  key($_POST);
         $postId =  preg_replace('#[a-z]+#', '', $post);
-        var_dump($postId);
 
         if ($signaled === true) {
            return $this->view->render($this->module, 'comment/signalize.php', [

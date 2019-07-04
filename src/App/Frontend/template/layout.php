@@ -42,14 +42,31 @@
                     espace lecture
                 </a>
             </li>
-            <li>
-                <a href="/connexion" class="btn grey-text indigo nav-btn">
-                    <i class="material-icons left">
-                        account_circle
-                    </i>
-                    se connecter
-                </a>
-            </li>
+            <?php if (!empty($_SESSION['auth'])): ?>
+                <li>
+                    <a href="/admin/dashboard">Administration</a>
+                </li>
+                <li>
+                    <form action="/logout" method="post">
+                        <button name="logout" type="submit" class="btn">
+                            <i class="material-icons left">
+                                account_circle
+                            </i>
+                            Se déconnecter
+                        </button>
+                    </form>
+
+                </li>
+            <?php else: ?>
+                <li>
+                    <a href="/connexion" class="btn grey-text indigo nav-btn">
+                        <i class="material-icons left">
+                            account_circle
+                        </i>
+                        se connecter
+                    </a>
+                </li>
+            <?php endif; ?>
         </ul>
 
         <!-- Nav mobile -->
